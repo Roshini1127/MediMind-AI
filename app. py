@@ -1,0 +1,60 @@
+
+import streamlit as st
+
+st.set_page_config(
+    page_title="MediMind AI",
+    page_icon="💙",
+    layout="wide"
+)
+
+st.markdown("""
+<style>
+.stApp {
+    background-color: #080D18;
+    color: #F4F8FF;
+}
+h1, h2, h3, p, label {
+    color: #EAF3FF !important;
+}
+.stButton > button {
+    background-color: #087CF0;
+    color: white;
+    border-radius: 10px;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.title("💙 MediMind AI")
+st.subheader("An AI-Powered Healthcare Assistant")
+st.caption("Smarter Insights, Healthier Lives")
+
+st.warning(
+    "Educational information only. "
+    "This app does not diagnose medical conditions."
+)
+
+st.header("Welcome to your health dashboard")
+
+st.write(
+    "Explore general health information "
+    "and healthcare assistant features."
+)
+
+feature = st.selectbox(
+    "Choose a module",
+    [
+        "Health Dashboard",
+        "Symptom Analysis",
+        "Healthcare Chatbot",
+        "Health Tips"
+    ]
+)
+
+if feature == "Health Dashboard":
+    st.info("Welcome to your health dashboard!")
+elif feature == "Symptom Analysis":
+    st.write("Symptom analysis module: coming soon.")
+elif feature == "Healthcare Chatbot":
+    st.write("Healthcare chatbot module: coming soon.")
+elif feature == "Health Tips":
+    st.write("General health tips module: coming soon.")
